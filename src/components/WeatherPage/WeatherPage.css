@@ -35,6 +35,7 @@
     flex-basis: 40%;
     display: flex;
     gap: 20px;
+    margin-top: 16px;
 }
 
 .w-property-card .w-h3-grey{
@@ -59,4 +60,10 @@
 .w-p-icon-div{
     display: flex;
     align-items: center;
+}
+
+@media(min-width: 1023px){
+    #w-properties{
+        width: 820px;
+    }
 }
