@@ -1,0 +1,45 @@
+.content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.umbrella-image{
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0 25px;
+    border-radius: 12.5px;
+}
+
+.first-info{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clima-title{
+    margin-bottom: 0;
+    font-size: 2.25rem;
+}
+
+.p-grey{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.btn{
+    border: none;
+    padding: 12.5px 25px;
+    border-radius: 7.5px;
+    cursor: pointer;
+}
+
+#first-p{
+    transform: translateY(-12.5px);
+}
+
+.btn-primary{
+    background: dodgerblue;
+    color: white;
+}

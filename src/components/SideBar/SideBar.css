@@ -1,0 +1,24 @@
+.sidebar{
+    border-radius: 7.5px;
+    background: #e9ebeb;
+    width: fit-content;
+    padding: 25px 20px 41vh 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.sb-pages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-top: 125px;
+}
+
+.sb-small{
+    color: grey;
+    font-size: .65em;
+    transform: translateY(-20px);
+}
