@@ -2,6 +2,8 @@ import './HomePage.css'
 import SideBar from '../SideBar'
 import WeatherIcon from '../WeatherIcon'
 import SearchBar from '../SearchBar'
+import SevenDayForecast from '../SevenDayForecast'
+import ForecastToday from '../ForecastToday'
 import { FaSun } from 'react-icons/fa' // UV Index
 import { FaWind } from 'react-icons/fa' // Wind
 import { WiHumidity } from 'react-icons/wi' // Humidity
@@ -18,7 +20,7 @@ export default function HomePage() {
             <SideBar />
             <SearchBar />
             <main className='w-main-content'>
-                <CityCard name='Madrid' />
+                <CityCard name='Madrid' className='w-city-card' />
                     <div id='w-properties'>
                         <PropertyCard type='uv' name='UV Index' value='3' />
                         <PropertyCard type='wind' name='Wind' value='0.2 km/h' />
@@ -29,6 +31,10 @@ export default function HomePage() {
                         <PropertyCard type='pressure' name='Pressure' value='1008 hPa' />
                         <PropertyCard type='sunset' name='Sunset' value='20:58' />
                     </div>
+                <div id='home-add'>
+                    <ForecastToday />
+                    <SevenDayForecast />
+                </div>
             </main>
         </>
     )

@@ -1,0 +1,41 @@
+.t-forecast{
+    margin: 20px;
+    border-radius: 20px;
+    background: #e9ebeb;
+    width: 320px;
+    padding: 10px 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+}
+
+.tf-cards{
+    display: flex;
+}
+
+.tf-section{
+    padding: 0 20px;
+}
+
+.tf-spec{
+    border-right: 2px solid lightgray;
+}
+
+#tf-icon-1,
+#tf-icon-2,
+#tf-icon-3 {
+    font-size: 2em;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tf-h2{
+    text-align: center;
+    margin-top: -15px;
+}
+
+.tf-h3{
+    color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,46 @@
+.d-forecast{
+    border-radius: 25px;
+    margin: 20px;
+    width: 320px;
+    background: #e9ebeb;
+    padding: 10px 30px;
+    padding-bottom: 30px;
+    font-size: .8em;
+}
+
+.df-h3{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.df-day{
+    border-bottom: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding: 10px 0;
+}
+
+.df-day > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.df-day .weather-icon{
+    font-size: 1.5em;
+}
+
+.df-day-name{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.175em;
+    font-weight: bold;
+}
+
+.df-weather-name{
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}

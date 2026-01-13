@@ -5,7 +5,7 @@ function WeatherIcon({type, size, id}) {
         rainy: '🌧️',
         clear: '🌤️'
     }
-    return <p id={id}>{weatherIcons[type]}</p>
+    return <p id={id} className='weather-icon'>{weatherIcons[type]}</p>
 }
 
 export default WeatherIcon
