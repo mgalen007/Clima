@@ -19,7 +19,7 @@ function FirstPage({size}) {
                 <FaUmbrella size='30px'/>
                 <h1 id='clima-title'>Clima</h1>
                 <p className='p-grey' id='first-p'>Weather App</p>
-                <button onClick={() => navigate('/weather')} className='btn btn-primary'>Get Started</button>
+                <button onClick={() => navigate('/home')} className='btn btn-primary'>Get Started</button>
             </div>
         </div>
     )

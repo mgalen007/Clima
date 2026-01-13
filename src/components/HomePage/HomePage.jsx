@@ -1,4 +1,4 @@
-import './WeatherPage.css'
+import './HomePage.css'
 import SideBar from '../SideBar'
 import WeatherIcon from '../WeatherIcon'
 import SearchBar from '../SearchBar'
@@ -12,7 +12,7 @@ import { IoIosSpeedometer } from 'react-icons/io' // Pressure
 import { GiSunset } from 'react-icons/gi' // Sunset
 
 
-export default function WeatherPage() {
+export default function HomePage() {
     return (
         <>
             <SideBar />
