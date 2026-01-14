@@ -12,6 +12,7 @@ import { FaThermometerHalf } from 'react-icons/fa' // Feels Like
 import { WiRaindrop } from 'react-icons/wi' // Chance of rain
 import { IoIosSpeedometer } from 'react-icons/io' // Pressure
 import { GiSunset } from 'react-icons/gi' // Sunset
+import { FaCircleArrowLeft } from 'react-icons/fa6'
 
 
 export default function HomePage() {
@@ -35,6 +36,7 @@ export default function HomePage() {
                     <ForecastToday />
                     <SevenDayForecast />
                 </div>
+                <DetailsPane />
             </main>
         </>
     )
@@ -74,6 +76,14 @@ function PropertyCard({name, value, type}) {
                 <h3>{name}</h3>
                 <h3 className='w-h3-grey'>{value}</h3>
             </div>
+        </div>
+    )
+}
+
+function DetailsPane() {
+    return (
+        <div className='h-details-pane'>
+            <FaCircleArrowLeft />
         </div>
     )
 }
