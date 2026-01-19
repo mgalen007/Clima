@@ -34,61 +34,66 @@ export default function HomePage() {
       <SideBar />
       <SearchBar />
       <main className="w-main-content">
-        <CityCard name="Madrid" className="w-city-card" />
         {loading ? (
-          <div id="w-properties">
-            <PropertyCard type="uv" name="UV Index" value="..." />
-            <PropertyCard type="wind" name="Wind" value="..." />
-            <PropertyCard type="humidity" name="Humidity" value="..." />
-            <PropertyCard type="visibility" name="Visibility" value="..." />
-            <PropertyCard type="feelsLike" name="Feels like" value="..." />
-            <PropertyCard type="rainChance" name="Chance of rain" value="..." />
-            <PropertyCard type="pressure" name="Pressure" value="..." />
-            <PropertyCard type="sunset" name="Sunset" value="..." />
-          </div>
+        <>
+            <CityCard name="Madrid" className="w-city-card" currentTemp='...' description='...' />
+            <div id="w-properties">
+                <PropertyCard type="uv" name="UV Index" value="..." />
+                <PropertyCard type="wind" name="Wind" value="..." />
+                <PropertyCard type="humidity" name="Humidity" value="..." />
+                <PropertyCard type="visibility" name="Visibility" value="..." />
+                <PropertyCard type="feelsLike" name="Feels like" value="..." />
+                <PropertyCard type="rainChance" name="Chance of rain" value="..." />
+                <PropertyCard type="pressure" name="Pressure" value="..." />
+                <PropertyCard type="sunset" name="Sunset" value="..." />
+            </div>
+        </>
         ) : (
-          <div id="w-properties">
-            <PropertyCard
-              type="uv"
-              name="UV Index"
-              value={cityData.uvIndex || "..."}
-            />
-            <PropertyCard
-              type="wind"
-              name="Wind"
-              value={cityData.windSpeed || "..."}
-            />
-            <PropertyCard
-              type="humidity"
-              name="Humidity"
-              value={cityData.humidity || "..."}
-            />
-            <PropertyCard
-              type="visibility"
-              name="Visibility"
-              value={cityData.visibility || "..."}
-            />
-            <PropertyCard
-              type="feelsLike"
-              name="Feels like"
-              value={cityData.feelsLike || "..."}
-            />
-            <PropertyCard
-              type="rainChance"
-              name="Chance of rain"
-              value={cityData.rainChance || "..."}
-            />
-            <PropertyCard
-              type="pressure"
-              name="Pressure"
-              value={cityData.pressure}
-            />
-            <PropertyCard
-              type="sunset"
-              name="Sunset"
-              value={new Date(cityData.sunset * 1000).toLocaleTimeString()}
-            />
-          </div>
+        <>
+            <CityCard name="Madrid" className="w-city-card" currentTemp={cityData.currentTemp+'°'} description={cityData.condition} />
+            <div id="w-properties">
+                <PropertyCard
+                type="uv"
+                name="UV Index"
+                value={cityData.uvIndex || "..."}
+                />
+                <PropertyCard
+                type="wind"
+                name="Wind"
+                value={cityData.windSpeed || "..."}
+                />
+                <PropertyCard
+                type="humidity"
+                name="Humidity"
+                value={cityData.humidity || "..."}
+                />
+                <PropertyCard
+                type="visibility"
+                name="Visibility"
+                value={cityData.visibility || "..."}
+                />
+                <PropertyCard
+                type="feelsLike"
+                name="Feels like"
+                value={cityData.feelsLike || "..."}
+                />
+                <PropertyCard
+                type="rainChance"
+                name="Chance of rain"
+                value={cityData.rainChance || "..."}
+                />
+                <PropertyCard
+                type="pressure"
+                name="Pressure"
+                value={cityData.pressure}
+                />
+                <PropertyCard
+                type="sunset"
+                name="Sunset"
+                value={new Date(cityData.sunset * 1000).toLocaleTimeString()}
+                />
+            </div>
+        </>
         )}
 
         <div id="home-add">
@@ -101,13 +106,13 @@ export default function HomePage() {
   );
 }
 
-function CityCard({ name }) {
+function CityCard({ name, description, currentTemp }) {
   return (
     <div className="w-city-card">
       <div>
         <h2>{name}</h2>
-        <p className="p-grey">Chance of rain: 0%</p>
-        <h1>31°</h1>
+        <p className="p-grey">Description: {description}</p>
+        <h1>{currentTemp}</h1>
       </div>
       <div className="w-icon">
         <WeatherIcon type="sunny" id="w-icon-type" />
