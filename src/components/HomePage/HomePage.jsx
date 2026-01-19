@@ -22,7 +22,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchCityData("Madrid");
+      const data = await fetchCityData("Kigali");
       setCityData(data);
       setLoading(false);
     };
@@ -36,7 +36,7 @@ export default function HomePage() {
       <main className="w-main-content">
         {loading ? (
         <>
-            <CityCard name="Madrid" className="w-city-card" currentTemp='...' description='...' />
+            <CityCard name="Kigali" className="w-city-card" currentTemp='...' description='...' />
             <div id="w-properties">
                 <PropertyCard type="uv" name="UV Index" value="..." />
                 <PropertyCard type="wind" name="Wind" value="..." />
@@ -50,7 +50,7 @@ export default function HomePage() {
         </>
         ) : (
         <>
-            <CityCard name="Madrid" className="w-city-card" currentTemp={cityData.currentTemp+'°'} description={cityData.condition} />
+            <CityCard name="Kigali" className="w-city-card" currentTemp={cityData.currentTemp+'°'} description={cityData.condition} />
             <div id="w-properties">
                 <PropertyCard
                 type="uv"
