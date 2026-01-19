@@ -52,7 +52,7 @@ You'll also need API keys from:
    
    Create a `.env` file in the root directory and add your API keys:
    ```env
-   VITE_OPENWEATHER_API_KEY=your_openweathermap_api_key_here
+   OPENWEATHER_API_KEY=your_openweathermap_api_key_here
    ```
 
 4. **Start the development server**
